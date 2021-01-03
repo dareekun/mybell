@@ -23,6 +23,10 @@ Auth::routes([
 ]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/add/{id}', [App\Http\Controllers\AdminController::class, 'add_schedule']);
+
 Route::get('/changep', [App\Http\Controllers\AdminController::class, 'changep']);
 Route::get('/changes', [App\Http\Controllers\AdminController::class, 'changes']);
+Route::get('/changex', [App\Http\Controllers\AdminController::class, 'changex']);
 Route::post('/audio-change', [App\Http\Controllers\AdminController::class, 'audio_change'])->name('changesound');
+Route::post('/newpassword', [App\Http\Controllers\AdminController::class, 'newpassword'])->name('proccesspassword');

@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Hash;
 
 use Auth;
 use File;
+Use Redirect;
 
 class AdminController extends Controller
 {
@@ -39,7 +40,7 @@ class AdminController extends Controller
     public function newpassword(Request $request) {
         $a1 = Auth::user();
         if (Hash::check($request->oldpassword, $a1->password)) {
-            DB::table('users')->where('email', $a1->username)->update(
+            DB::table('users')->where('email', $a1->email)->update(
                 [
                     'password' => bcrypt($request->password1),
                 ]
