@@ -46,7 +46,7 @@ class HomeController extends Controller
         $fime05 = array();
 
         // Data 01
-        $data = fopen("schedule/PLAY_1.txt", "r") or die("Unable to open file!");
+        $data = fopen("schedule/PLAY_01.txt", "r") or die("Unable to open file!");
         $i = 0;
         while (!feof($data)) {
           $line = fgets($data);
@@ -61,7 +61,7 @@ class HomeController extends Controller
         fclose($data);
 
         // Data 02
-        $data = fopen("schedule/PLAY_2.txt", "r") or die("Unable to open file!");
+        $data = fopen("schedule/PLAY_02.txt", "r") or die("Unable to open file!");
         $i = 0;
         while (!feof($data)) {
           $line = fgets($data);
@@ -76,7 +76,7 @@ class HomeController extends Controller
         fclose($data);
 
         // Data 03
-        $data = fopen("schedule/PLAY_3.txt", "r") or die("Unable to open file!");
+        $data = fopen("schedule/PLAY_03.txt", "r") or die("Unable to open file!");
         $i = 0;
         while (!feof($data)) {
             $line = fgets($data);
@@ -91,7 +91,7 @@ class HomeController extends Controller
         fclose($data);
 
         // Data 04
-        $data = fopen("schedule/PLAY_4.txt", "r") or die("Unable to open file!");
+        $data = fopen("schedule/PLAY_04.txt", "r") or die("Unable to open file!");
         $i = 0;
         while (!feof($data)) {
           $line = fgets($data);
@@ -106,7 +106,7 @@ class HomeController extends Controller
         fclose($data);
 
         // Data 05
-        $data = fopen("schedule/PLAY_5.txt", "r") or die("Unable to open file!");
+        $data = fopen("schedule/PLAY_05.txt", "r") or die("Unable to open file!");
         $i = 0;
         while (!feof($data)) {
             $line = fgets($data);
@@ -121,7 +121,7 @@ class HomeController extends Controller
         fclose($data);
 
         // Data 06
-        $data = fopen("schedule/PLAY_6.txt", "r") or die("Unable to open file!");
+        $data = fopen("schedule/PLAY_06.txt", "r") or die("Unable to open file!");
         $i = 0;
         while (!feof($data)) {
           $line = fgets($data);
@@ -136,7 +136,7 @@ class HomeController extends Controller
         fclose($data);
 
         // Data 07
-        $data = fopen("schedule/PLAY_7.txt", "r") or die("Unable to open file!");
+        $data = fopen("schedule/PLAY_07.txt", "r") or die("Unable to open file!");
         $i = 0;
         while (!feof($data)) {
             $line = fgets($data);
@@ -151,7 +151,7 @@ class HomeController extends Controller
         fclose($data);
 
         // Data 08
-        $data = fopen("schedule/PLAY_8.txt", "r") or die("Unable to open file!");
+        $data = fopen("schedule/PLAY_08.txt", "r") or die("Unable to open file!");
         $i = 0;
         while (!feof($data)) {
           $line = fgets($data);
@@ -166,7 +166,7 @@ class HomeController extends Controller
         fclose($data);
 
         // Data 09
-        $data = fopen("schedule/PLAY_9.txt", "r") or die("Unable to open file!");
+        $data = fopen("schedule/PLAY_09.txt", "r") or die("Unable to open file!");
         $i = 0;
         while (!feof($data)) {
             $line = fgets($data);
@@ -271,7 +271,7 @@ class HomeController extends Controller
         fclose($data);
 
         // Data Friday 01
-        $data = fopen("schedule/Friday_1.txt", "r") or die("Unable to open file!");
+        $data = fopen("schedule/Friday_01.txt", "r") or die("Unable to open file!");
         $i = 0;
         while (!feof($data)) {
             $line = fgets($data);
@@ -286,7 +286,7 @@ class HomeController extends Controller
         fclose($data);
 
         // Data Friday 02
-        $data = fopen("schedule/Friday_2.txt", "r") or die("Unable to open file!");
+        $data = fopen("schedule/Friday_02.txt", "r") or die("Unable to open file!");
         $i = 0;
         while (!feof($data)) {
             $line = fgets($data);
@@ -301,7 +301,7 @@ class HomeController extends Controller
         fclose($data);
 
         // Data Friday 03
-        $data = fopen("schedule/Friday_3.txt", "r") or die("Unable to open file!");
+        $data = fopen("schedule/Friday_03.txt", "r") or die("Unable to open file!");
         $i = 0;
         while (!feof($data)) {
             $line = fgets($data);
@@ -316,7 +316,7 @@ class HomeController extends Controller
         fclose($data);
 
         // Data Friday 04
-        $data = fopen("schedule/Friday_4.txt", "r") or die("Unable to open file!");
+        $data = fopen("schedule/Friday_04.txt", "r") or die("Unable to open file!");
         $i = 0;
         while (!feof($data)) {
             $line = fgets($data);
@@ -331,7 +331,7 @@ class HomeController extends Controller
         fclose($data);
 
         // Data Friday 05
-        $data = fopen("schedule/Friday_5.txt", "r") or die("Unable to open file!");
+        $data = fopen("schedule/Friday_05.txt", "r") or die("Unable to open file!");
         $i = 0;
         while (!feof($data)) {
             $line = fgets($data);
@@ -345,12 +345,17 @@ class HomeController extends Controller
         }
         fclose($data);
 
+        // Data Exclude
+        $rawdata = file_get_contents("schedule/EXCLUDE.txt", "r") or die("Unable to open file!");
+        $exclude = substr($rawdata,0,2)."-".substr($rawdata,2,2)."-".substr($rawdata,4,8);
+
         // return $time;
         return view('home', [
         'data01' => $time01, 'data02' => $time02, 'data03' => $time03, 'data04' => $time04, 'data05' => $time05, 
         'data06' => $time06, 'data07' => $time07, 'data08' => $time08, 'data09' => $time09, 'data10' => $time10, 
         'data11' => $time11, 'data12' => $time12, 'data13' => $time13, 'data14' => $time14, 'data15' => $time15, 
         'fata01' => $fime01, 'fata02' => $fime02, 'fata03' => $fime03, 'fata04' => $fime04, 'fata05' => $fime05, 
+        'exclude' => $exclude
         ]);
     }
 

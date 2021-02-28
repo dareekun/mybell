@@ -82,10 +82,6 @@
                                             {{ __('Change Sound') }}
                                         </a>
 
-                                        <a class="dropdown-item" href="/changes">
-                                            {{ __('Change Exception') }}
-                                        </a>
-
                                         <a class="dropdown-item" href="/changep">
                                             {{ __('Change Password') }}
                                         </a>

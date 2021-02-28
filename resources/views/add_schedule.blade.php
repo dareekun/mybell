@@ -555,8 +555,6 @@
 </div>
 
 
-
-
 <!-- Modal for change sound -->
 <!-- Modal -->
 <form action="{{ route('changesound') }}" enctype="multipart/form-data" method="post">
