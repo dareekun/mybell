@@ -30,6 +30,16 @@
     .link .link:hover {
         text-decoration: none;
     }
+
+    .my-custom-scrollbar {
+        position: relative;
+        height: 350px;
+        overflow: auto;
+    }
+
+    .table-wrapper-scroll-y {
+        display: block;
+    }
     </style>
 
     <!-- Styles -->
@@ -78,7 +88,7 @@
 
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
-                                    <a class="dropdown-item" href="/changes">
+                                        <a class="dropdown-item" href="/changes">
                                             {{ __('Change Sound') }}
                                         </a>
 
@@ -110,6 +120,7 @@
             @yield('content')
         </main>
     </div>
+    <script type="text/javascript" src="{{ asset('/js/axios.min.js') }}"></script>
     @stack('scripts')
 </body>
 

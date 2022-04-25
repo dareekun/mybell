@@ -351,6 +351,8 @@ class HomeController extends Controller
 
         // return $time;
         return view('home', [
+        'ind01' => 1, 'ind02' => 1, 'ind03' => 1, 'ind04' => 1, 'ind05' => 1, 'ind06' => 1, 'ind07' => 1, 'ind08' => 1, 
+        'ind09' => 1, 'ind10' => 1, 'ind11' => 1, 'ind12' => 1, 'ind13' => 1, 'ind14' => 1, 'ind15' => 1, 'ind16' => 1, 
         'data01' => $time01, 'data02' => $time02, 'data03' => $time03, 'data04' => $time04, 'data05' => $time05, 
         'data06' => $time06, 'data07' => $time07, 'data08' => $time08, 'data09' => $time09, 'data10' => $time10, 
         'data11' => $time11, 'data12' => $time12, 'data13' => $time13, 'data14' => $time14, 'data15' => $time15, 

@@ -4,14 +4,14 @@
 <div class="container-fluid">
     <!-- Alarm type 01 -->
     <div class="row justify-content-center align-items-center">
-        <div class="col-md-10">
+        <div class="col-md-12">
             <h4>Add Schedule Type {{$type}}</h4>
             <p>Alarm Number {{$number}}</p>
         </div>
     </div>
     <div class="row justify-content-center align-items-center">
         <!-- Alarm 1 -->
-        <div class="col-md-2">
+        <div class="col-md-3">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Alarm 01</h5>
@@ -44,7 +44,7 @@
             </div>
         </div>
         <!-- Alarm 2 -->
-        <div class="col-md-2">
+        <div class="col-md-3">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Alarm 02</h5>
@@ -78,7 +78,7 @@
             </div>
         </div>
         <!-- Alarm 3 -->
-        <div class="col-md-2">
+        <div class="col-md-3">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Alarm 03</h5>
@@ -112,7 +112,7 @@
             </div>
         </div>
         <!-- Alarm 4 -->
-        <div class="col-md-2">
+        <div class="col-md-3">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Alarm 04</h5>
@@ -145,52 +145,19 @@
                 </div>
             </div>
         </div>
-        <!-- Alarm 5 -->
-        <div class="col-md-2">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Alarm 05</h5>
-                    <!-- Control Audio -->
-                    <div class="row">
-                        <div class="col-md-5">
-                            <h6 class="card-subtitle mb-2 text-muted"><a class="card-link" href="#"
-                                    onclick="modalchange(05)"><i class="fas fa-pencil-alt"></i> Change</a></h6>
-                        </div>
-                        <div class="col-md-7">
-                            <h6 class="card-subtitle mb-2 text-muted"><a class="card-link" href="#"
-                                    onclick="playaudi05()"><i class="fas fa-play"></i> Play</a><a class="card-link"
-                                    href="#" onclick="stopaudi05()"><i class="fas fa-stop"></i> Stop</a></h6>
-                        </div>
-                    </div>
-                    <!-- Audio File -->
-                    <audio hidden controls id="audio05">
-                        <source src="{{ asset('sound/05.ogg') }}" type="audio/ogg">
-                    </audio>
-                    <!-- Audio Duration -->
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p class="card-test">Audio Duration:</p>
-                        </div>
-                        <div class="col-md-6">
-                            <p id="length05"></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
-    <!-- Alarm type 02 -->
-    <div class="row justify-content-center align-items-center my-3">
-        <div class="col-md-10">
+    <!-- Alarm type 02 --> 
+    <div class="row justify-content-center align-items-center my-3 mx-4">
+        <div class="col-md-12">
             <h4>Alarm Type 2</h4>
             <p>Regular Alarm that still will run from monday to saturday, but on <b class="text-danger">friday</b> they
                 have seperated schedule</p>
         </div>
     </div>
-    <div class="row justify-content-center align-items-center">
+    <div class="row justify-content-center align-items-center mx-4">
         <!-- Alarm 1 -->
-        <div class="col-md-2">
+        <div class="col-md-3">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Alarm 01</h5>
@@ -223,7 +190,7 @@
             </div>
         </div>
         <!-- Alarm 2 -->
-        <div class="col-md-2">
+        <div class="col-md-3">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Alarm 02</h5>
@@ -257,7 +224,7 @@
             </div>
         </div>
         <!-- Alarm 3 -->
-        <div class="col-md-2">
+        <div class="col-md-3">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Alarm 03</h5>
@@ -291,7 +258,7 @@
             </div>
         </div>
         <!-- Alarm 4 -->
-        <div class="col-md-2">
+        <div class="col-md-3">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Alarm 04</h5>
@@ -321,39 +288,6 @@
                         </div>
                     </div>
 
-                </div>
-            </div>
-        </div>
-        <!-- Alarm 5 -->
-        <div class="col-md-2">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Alarm 05</h5>
-                    <!-- Control Audio -->
-                    <div class="row">
-                        <div class="col-md-5">
-                            <h6 class="card-subtitle mb-2 text-muted"><a class="card-link" href="#"
-                                    onclick="modalchange(10)"><i class="fas fa-pencil-alt"></i> Change</a></h6>
-                        </div>
-                        <div class="col-md-7">
-                            <h6 class="card-subtitle mb-2 text-muted"><a class="card-link" href="#"
-                                    onclick="playaudi10()"><i class="fas fa-play"></i> Play</a><a class="card-link"
-                                    href="#" onclick="stopaudi10()"><i class="fas fa-stop"></i> Stop</a></h6>
-                        </div>
-                    </div>
-                    <!-- Audio File -->
-                    <audio hidden controls id="audio10">
-                        <source src="{{ asset('sound/10.ogg') }}" type="audio/ogg">
-                    </audio>
-                    <!-- Audio Duration -->
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p class="card-test">Audio Duration:</p>
-                        </div>
-                        <div class="col-md-6">
-                            <p id="length10"></p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -431,7 +365,6 @@
                             <p id="length12"></p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
