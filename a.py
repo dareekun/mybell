@@ -6,97 +6,97 @@ import play_sound
 print("TEST APLIKASI")
 
 #Suara 1
-with open('/home/pi/public/schedule/PLAY_1.txt', 'r') as ins:
+with open('/var/www/mybell/public/schedule/PLAY_01.txt', 'r') as ins:
     Time1 = []
     for line in ins:
         Time1.append(line[:6])
-with open('/home/pi/public/schedule/Friday_1.txt', 'r') as ins:
+with open('/var/www/mybell/public/schedule/Friday_01.txt', 'r') as ins:
     Friday1 = []
     for line in ins:
         Friday1.append(line[:6])           
 #Suara 2 
-with open('/home/pi/public/schedule/PLAY_2.txt', 'r') as ins:
+with open('/var/www/mybell/public/schedule/PLAY_02.txt', 'r') as ins:
     Time2 = []
     for line in ins:
         Time2.append(line[:6])
-with open('/home/pi/public/schedule/Friday_2.txt', 'r') as ins:
+with open('/var/www/mybell/public/schedule/Friday_02.txt', 'r') as ins:
     Friday2 = []
     for line in ins:
         Friday2.append(line[:6])           
 #Suara 3         
-with open('/home/pi/public/schedule/PLAY_3.txt', 'r') as ins:
+with open('/var/www/mybell/public/schedule/PLAY_03.txt', 'r') as ins:
     Time3 = []
     for line in ins:
         Time3.append(line[:6])
-with open('/home/pi/public/schedule/Friday_3.txt', 'r') as ins:
+with open('/var/www/mybell/public/schedule/Friday_03.txt', 'r') as ins:
     Friday3 = []
     for line in ins:
         Friday3.append(line[:6])           
 #Suara 4          
-with open('/home/pi/public/schedule/PLAY_4.txt', 'r') as ins:
+with open('/var/www/mybell/public/schedule/PLAY_40.txt', 'r') as ins:
     Time4 = []
     for line in ins:
         Time4.append(line[:6])
-with open('/home/pi/public/schedule/Friday_4.txt', 'r') as ins:
+with open('/var/www/mybell/public/schedule/Friday_04.txt', 'r') as ins:
     Friday4 = []
     for line in ins:
         Friday4.append(line[:6])  
 #Suara 5        
-with open('/home/pi/public/schedule/PLAY_5.txt', 'r') as ins:
+with open('/var/www/mybell/public/schedule/PLAY_05.txt', 'r') as ins:
     Time5 = []
     for line in ins:
         Time5.append(line[:6])   
-with open('/home/pi/public/schedule/Friday_5.txt', 'r') as ins:
+with open('/var/www/mybell/public/schedule/Friday_05.txt', 'r') as ins:
     Friday5 = []
     for line in ins:
         Friday5.append(line[:6])   
 #Suara 6
-with open('/home/pi/public/schedule/PLAY_6.txt', 'r') as ins:
+with open('/var/www/mybell/public/schedule/PLAY_06.txt', 'r') as ins:
     Time6 = []
     for line in ins:
         Time6.append(line[:6])         
 #Suara 7 
-with open('/home/pi/public/schedule/PLAY_7.txt', 'r') as ins:
+with open('/var/www/mybell/public/schedule/PLAY_07.txt', 'r') as ins:
     Time7 = []
     for line in ins:
         Time7.append(line[:6])        
 #Suara 8         
-with open('/home/pi/public/schedule/PLAY_8.txt', 'r') as ins:
+with open('/var/www/mybell/public/schedule/PLAY_08.txt', 'r') as ins:
     Time8 = []
     for line in ins:
         Time8.append(line[:6])        
 #Suara 9         
-with open('/home/pi/public/schedule/PLAY_9.txt', 'r') as ins:
+with open('/var/www/mybell/public/schedule/PLAY_09.txt', 'r') as ins:
     Time9 = []
     for line in ins:
         Time9.append(line[:6])
 #Suara 10        
-with open('/home/pi/public/schedule/PLAY_10.txt', 'r') as ins:
+with open('/var/www/mybell/public/schedule/PLAY_10.txt', 'r') as ins:
     Time10 = []
     for line in ins:
         Time10.append(line[:6])   
 #Suara 11
-with open('/home/pi/public/schedule/PLAY_11.txt', 'r') as ins:
+with open('/var/www/mybell/public/schedule/PLAY_11.txt', 'r') as ins:
     Time11 = []
     for line in ins:
         Time11.append(line[:6])    
 #Suara 12 
-with open('/home/pi/public/schedule/PLAY_12.txt', 'r') as ins:
+with open('/var/www/mybell/public/schedule/PLAY_12.txt', 'r') as ins:
     Time12 = []
     for line in ins:
         Time12.append(line[:6])       
 #Suara 13         
-with open('/home/pi/public/schedule/PLAY_13.txt', 'r') as ins:
+with open('/var/www/mybell/public/schedule/PLAY_13.txt', 'r') as ins:
     Time13 = []
     for line in ins:
         Time13.append(line[:6])        
 #Suara 14          
-with open('/home/pi/public/schedule/PLAY_14.txt', 'r') as ins:
+with open('/var/www/mybell/public/schedule/PLAY_14.txt', 'r') as ins:
     Time14 = []
     for line in ins:
         Time14.append(line[:6])
 #Suara 15        
-with open('/home/pi/public/schedule/PLAY_15.txt', 'r') as ins:
+with open('/var/www/mybell/public/schedule/PLAY_15.txt', 'r') as ins:
     Time15 = []
     for line in ins:
         Time15.append(line[:6])           
@@ -123,7 +123,7 @@ Time14 = list(map(str, Time14))
 Time15 = list(map(str, Time15))
 
 
-exc = open('/home/pi/public/schedule/exclude.txt', 'r')  
+exc = open('/var/www/mybell/public/schedule/EXCLUDE.txt', 'r')  
 isi = exc.read()
 
 date = time.strftime("%d%m%Y")
